@@ -171,6 +171,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 					}
 					FreeLibrary(hDll);
 				}
+				else
+					MessageBox(0, L"Không tìm thấy file HookDLL.dll", 0, 0);
 				break;
 			}
 			case IDC_BUTTON_OUTPUT:
@@ -182,6 +184,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 					if (installHookproc != NULL)
 						installHookproc(hWnd);
 				}
+				else
+					MessageBox(0, L"Không tìm thấy file HookDLL.dll", 0, 0);
 				break;
 			}
             case IDM_ABOUT:
